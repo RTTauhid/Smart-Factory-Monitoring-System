@@ -1,0 +1,121 @@
+css = """body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #222;
+}
+
+header {
+  background: #0b4f8a;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+nav {
+  background: #083b66;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  padding: 60px;
+  text-align: center;
+  background: white;
+}
+
+.hero h2 {
+  font-size: 42px;
+}
+
+.hero button {
+  padding: 12px 24px;
+  border: none;
+  background: #0b4f8a;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dashboard,
+.modules,
+.alerts,
+.screen-display {
+  padding: 50px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 28px;
+  font-weight: bold;
+  color: #0b4f8a;
+}
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.module {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.alerts ul {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.alerts li {
+  margin: 15px 0;
+}
+
+.screen-display {
+  background: #eaf2fb;
+}
+
+footer {
+  background: #083b66;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+"""
+
+(base / "index.html").write_text(html, encoding="utf-8")
+(base / "style.css").write_text(css, encoding="utf-8")
+
+
